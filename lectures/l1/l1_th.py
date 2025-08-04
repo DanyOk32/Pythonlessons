@@ -1,4 +1,5 @@
 # integer, float, boolean, none, string
+"isinstance('text', type) - give True or False"
 
 # -methods for lists
 """
@@ -18,8 +19,8 @@ append( add new)
  slice for lists [1:3:arg3] new list from 1 index till 3 index, without last. Arg3 - step
 """
 # tuple (кортедж)
-"""
-(1,2,3,'hello')
+""".201>,mnbvcx6524\
+]'[p0o98i7y6t54r3e2w1q` [-'p09o8i7uy6t5r4e3w2q   (1,2,3,'hello')
 index(same as lists)
 count(same as lists)
 list(tuple) - convert to list
@@ -90,3 +91,4 @@ sorted() - create new array
 range(a,b,c) - a-start, b-finis, c - step'
 'smthin'.join() - from list to str
 """
+print ('string')
