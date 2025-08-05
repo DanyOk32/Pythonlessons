@@ -120,20 +120,49 @@ def function_2_tsk2(List):
 ###########################################################
 list_tsk3 = [22, 3,5,2,8,2,-23, 8,23,5]
 # print(min(list_tsk3))
-list_tsk3_new=set(list_tsk3)
+list_tsk3_new=list(set(list_tsk3))
 # print(list_tsk3_new)
 def replaced_Every_fourth(list):
-    return ['x' if (i%4)-1==0 else value for i,value in enumerate(list) ]
+    return ['x' if i%4==0 else value for i,value in enumerate(list) ]
 # print(replaced_Every_fourth(list_tsk3))
 def stranno(x):
-    print('.'*x)
-# stranno(10)
-integer =1
-while integer < 10:
-    multipl = 1
-    while multipl < 10:
-        print(f'{integer} * {multipl} = {integer*multipl}', end='   ')
-        multipl += 1
-    print()
-    integer += 1
-
+    i=1
+    while i <= x:
+        if i ==1 or i ==x:
+            print('*'*x)
+        else :
+            print('*' + ' '*(x-2) + '*')
+        i+=1
+# stranno(15)
+def table_calc ():
+    integer =1
+    while integer < 10:
+        multipl = 1
+        while multipl < 10:
+            print(f'{integer:2} * {multipl:1} = {integer*multipl:3}', end=' ')
+            multipl += 1
+        print()
+        integer += 1
+def menu_Fun():
+    while True:
+        print('1) - min число')
+        print('2) - дублікати')
+        print('3) - видалити кожне 4те')
+        print('4) - квадрат зі стороною')
+        print('5) - множення табл')
+        print('6) - EXIT')
+        result = input()
+        if result == '1':
+            print(f'min число це {min(list_tsk3)}')
+        elif result == '2':
+            print(set(list_tsk3))
+        elif result == '3':
+            print(replaced_Every_fourth(list_tsk3))
+        elif result == '4':
+            stranno(15)
+        elif result == '5':
+            table_calc()
+        elif result == '6':
+            'break'
+        else: 'поганий вибір'
+menu_Fun()
