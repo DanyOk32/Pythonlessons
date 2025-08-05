@@ -12,7 +12,7 @@
 ###########################################################
 st = 'as 12 fsad124 4124dsf 1234f'
 result1 =[j for j in st if j.isdigit()]
-print(', '.join(result1))
+# print(', '.join(result1))
 ###########################################################
 """
 2)написати прогу, яка вибирає зі введеної строки числа і виводить їх так, як вони написані
@@ -45,7 +45,7 @@ def progrl1(string_ex):
 st = 'as 23 fdfdg544 34'
 # print(', '.join(''.join([ch if ch.isdigit() else ' ' for ch in st]).split()))
 # print(''.join([ch if ch.isdigit() else ' ' for ch in st]).split())
-progrl1(st)
+# progrl1(st)
 
 ###########################################################
 '''1) є
@@ -58,7 +58,7 @@ greeting = ‘Hello, world’
 [‘H’, ‘E’, ‘L’, ‘L’, ‘O’, ‘, ’, ‘ ‘, ‘W’, ‘O’, ‘R’, ‘L’, ‘D’]'''
 ###########################################################
 greeting = 'Hello, world'
-print([k.upper() for k in greeting])
+# print([k.upper() for k in greeting])
 ###########################################################
 '''2) з діапазону від 0-50 записати тільки непарні числа, при цьому піднести їх до квадрату
 
@@ -66,16 +66,16 @@ print([k.upper() for k in greeting])
 
 [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, …]'''
 ###########################################################
-print([i**2 for i in range(50) if i%2==0])
+# print([i**2 for i in range(50) if i%2==0])
 # print([i for i in range(10, 101) if i%2==1 and i*2%5==0])
 
 
 ###########################################################
 '''function
-– створити функцію, яка виводить List 
-– створити функцію, яка приймає три числа, та виводить та повертає найбільше. 
-– створити функцію, яка приймає будь - яку кількість чисел, повертає найменше, а виводить найбільше
-– створити функцію, яка повертає найбільше число з List 
+– створити функцію, яка виводить List +
+– створити функцію, яка приймає три числа, та виводить та повертає найбільше. +
+– створити функцію, яка приймає будь - яку кількість чисел, повертає найменше, а виводить найбільше +
+– створити функцію, яка повертає найбільше число з List +
 – створити функцію, яка повертає найменше число з'''
 ###########################################################
 def function_shower(numbers):
@@ -83,14 +83,57 @@ def function_shower(numbers):
 def function_tsk2(a,b,c):
     print(max(int(a),int(b),int(c)))
     return max(int(a),int(b),int(c))
-def function_tsk3(a, kwargs):
-    print(kwargs)
-function_tsk3(1,3,5,6)
-function_tsk2(1,3,'5')
+def function_tsk3(*args):
+    print(max(args))
+    return min(args)
+def function_tsk4(List):
+    print(max(List))
+# function_tsk4([1,2,3,4,5,6])
+def fucntion_tsk5(*args):
+    print(min(args))
 ###########################################################
 '''List
 – створити функцію, яка приймає List чисел та складає значення елементів List та повертає його.
 – створити функцію, яка приймає List чисел та повертає середнє арифметичне його значень.'''
 ###########################################################
+def function_2_tsk1(List):
+    print(sum(List))
+    return sum(List)
+# function_2_tsk1([1,2,3,4,5,6])
+def function_2_tsk2(List):
+    print(sum(List)/len(List))
+    return sum(List)/len(List)
+
+
+# function_2_tsk2([1,2,3,4,5,6])
 ###########################################################
+"""
+1 Є list:
+  list = [22, 3,5,2,8,2,-23, 8,23,5]
+  – знайти  мін. число
+  – видалити усі дублікати
+  – замінити кожне 4-те значення на ‘X’
+2) вивести на екран пустий квадрат з “*”, сторона якого вказана як аргумент функції
+3) вивести табличку множення за допомогою циклу while
+4) переробити це завдання під меню
+"""
+###########################################################
+list_tsk3 = [22, 3,5,2,8,2,-23, 8,23,5]
+# print(min(list_tsk3))
+list_tsk3_new=set(list_tsk3)
+# print(list_tsk3_new)
+def replaced_Every_fourth(list):
+    return ['x' if (i%4)-1==0 else value for i,value in enumerate(list) ]
+# print(replaced_Every_fourth(list_tsk3))
+def stranno(x):
+    print('.'*x)
+# stranno(10)
+integer =1
+while integer < 10:
+    multipl = 1
+    while multipl < 10:
+        print(f'{integer} * {multipl} = {integer*multipl}', end='   ')
+        multipl += 1
+    print()
+    integer += 1
 
