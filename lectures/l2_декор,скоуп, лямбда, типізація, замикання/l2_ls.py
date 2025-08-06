@@ -34,7 +34,7 @@
 # list_exemple=[1,2,3,4,5]
 # print(list(map(lambda x: x ** 2, list_exemple)))
 # print(list(filter(lambda x: x % 2 == 0, list_exemple)))
-# from lectures.l1.l1_hmw import fucntion_tsk5
+# from lectures.l1_базові типи та функції.l1_hmw import fucntion_tsk5
 
 
 # -------
