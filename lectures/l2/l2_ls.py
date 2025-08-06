@@ -34,6 +34,8 @@
 # list_exemple=[1,2,3,4,5]
 # print(list(map(lambda x: x ** 2, list_exemple)))
 # print(list(filter(lambda x: x % 2 == 0, list_exemple)))
+# from lectures.l1.l1_hmw import fucntion_tsk5
+
 
 # -------
 # from typing import Callable
@@ -63,15 +65,50 @@
 # print(bbb())
 # print(bbb())
 # -------213
-result=''
-x=input('sd      1 ')
-i=1
-for key in x:
-    z = len(x) - i
-    if i!=len(x):
-        result = result + key + '0'*z + ' + '
-    elif i==len(x):
-        result = result + key + '0'*z
-    i+=1
-print(result)
+# result=''
+# x=input('sd      1 ')
+# i=1
+# for key in x:
+#     z = len(x) - i
+#     if i!=len(x):
+#         result = result + key + '0'*z + ' + '
+#     elif i==len(x):
+#         result = result + key + '0'*z
+#     i+=1
+# print(result)
+# def func_shower():
+#     x=[]
+#     for key, val in enumerate(x, 1):
+#         print(f'{key}key - {val}', end=' ; ')
+#
+# print(func_shower())
+
+# from typing import TypedDict, Callable, List
+# class Task(TypedDict):
+#     tittle: str
+#     done: bool
+#
+# def task_manager()-> tuple[Callable[[Task], None], Callable[[], list[Task]]]:
+#     all_tasks:list[Task]=[]
+#     def add_task(task:Task)->None:
+#         all_tasks.append(task)
+#     def get_all()->list[Task]:
+#         return[task for task in all_tasks if task['done']]
+#
+#     return add_task, get_all
+# adding, showing = task_manager()
+# adding({'tittle': 'Valeria', 'done':True})
+# adding({'tittle': 'Subas', 'done':False})
+# adding({'tittle': 'bf', 'done':False})
+# adding({'tittle': 'rty', 'done':True})
+# adding({'tittle': 'qwe', 'done':True})
+# print(showing())
+# def decor(function):
+#     def inner(*args,**kwargs):
+#         print('*')
+#         function(*args,**kwargs)
+#         print('*')
+#     return inner
+# @decor
+
 
