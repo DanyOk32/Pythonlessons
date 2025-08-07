@@ -27,6 +27,17 @@ class User:    =  class User(object):
         self.свої класи = свої класи'
     CTRL + O, відкриє все унаслідування
 
+    Абстрактні класи - это шаблон для других классов.
+    Он не предназначен для создания экземпляров, а только для наследования.
+
+    from abc import ABC, abstractmethod
+    class name(ABS):
+    @abstractmethod - декоратор,ОБОВ'ЯЗКОВИЙ,
+    def pay(self, amount)
+        pass
+    class exemple2(pay) - унаслідує абстрактний клас pay
+    -використувується для стандартизації
+
     Інкапсуляція
     @property - дозволяє користуватись функцією як атрибутом
     def give(self)

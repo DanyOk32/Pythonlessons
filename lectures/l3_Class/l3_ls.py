@@ -42,4 +42,51 @@
 #         return Array(*[func(item) for item in self.__arr])
 #     def filter(self, cb):
 #         return Array(*[item for item in self.__arr if cb(item)])
+# ===============================================
+# from abc import ABC, abstractmethod
+# class Transport(ABC):
+#     @abstractmethod
+#     def move(self):
+#         print('Hello')
+# class Car(Transport):
+#     def move(self):
+#
+# car = Car()
+# car.move()
+# ======================================================
+'''
+Создай абстрактный класс Animal, который:
+имеет атрибут name;
+содержит абстрактный метод make_sound().
+Создай классы-наследники:
+Cow → звук: "Moo"
+Dog → звук: "Woof"
+Chicken → звук: "Cluck"
+Создай список разных животных (экземпляры классов Cow, Dog, Chicken), и пройдись по нему циклом, вызывая make_sound() для каждого.
 
+Bobby says: Moo
+Rex says: Woof
+Chika says: Cluck
+'''
+# from abc import ABC, abstractmethod
+# class Animal(ABC):
+#     def __init__(self, name):
+#         self.name = name
+#     @abstractmethod
+#     def make_sound(self):
+#         pass
+# class Cow(Animal):
+#     def make_sound(self):
+#         print(f'{self.name} says: Moo')
+# class Dog(Animal):
+#     def make_sound(self):
+#         print(f'{self.name} says: Woof')
+# class Cluck(Animal):
+#     def make_sound(self):
+#         print(f'{self.name} says: Cluck')
+# cow1 = Cow('Olga1')
+# dog1 = Dog('oleg1')
+# cow2 = Cow('Olga2')
+# cluck1 = Cluck('Ryaba')
+# animal_list = [cow1, dog1, cluck1]
+# for i in animal_list: i.make_sound()
