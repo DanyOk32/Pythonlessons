@@ -15,8 +15,6 @@ else:
 finally:
    ... - в любому разі спрацює
 '''
-from email.policy import default
-
 ###########################################################
 # -------Generators
 '''
@@ -136,7 +134,7 @@ def matcher(source:className,dict):
         ....
     if isinstance(source,dict):
     ....
-------EXEMPLES
+------EXEMPLES 
 def matcher (source:className,dict):
     match source:
         case className(...,...):
