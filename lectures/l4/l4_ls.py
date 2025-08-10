@@ -141,12 +141,27 @@ email_writer('13@gmail.com')
 #     elif choice == '0' or False:
 #         break
 #---------------------------------------------
-def gen_id_purch(start=0, width=5):
-    while True:
-        yield f'{str(start).zfill(width)}'
-        start += 1
-gen_id = gen_id_purch()
-print(next(gen_id))
-print(next(gen_id))
-print(next(gen_id))
-print(next(gen_id))
+# def gen_id_purch(start=0, width=5):
+#     while True:
+#         yield f'{str(start).zfill(width)}'
+#         start += 1
+# gen_id = gen_id_purch()
+# print(next(gen_id))
+# print(next(gen_id))
+# print(next(gen_id))
+# print(next(gen_id))
+g= (x for x in range(5))
+g2= [x for x in range(5)]
+try:
+    print (next(g), end=' next : ')
+    print (next(g), end=' next : ')
+    print (next(g), end=' next : ')
+    print (next(g), end=' next : ')
+    print (next(g), end=' next : ')
+    print (next(g), end=' next : ')
+    print (next(g))
+except StopIteration:
+    print('the end')
+
+print (g2)
+
